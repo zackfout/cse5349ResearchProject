@@ -1,5 +1,5 @@
-import numpy as np
 import time
+import numpy as np
 import sieve
 
 def trialDivision(n):

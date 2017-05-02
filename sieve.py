@@ -1,5 +1,5 @@
-import numpy as np
 import time
+import numpy as np
 
 def sieveOfEratosthenes(n):
     limit = n + 1
@@ -28,3 +28,12 @@ def sieveBigO(limit):
         runningTime.append((end - start))
 
     return {'n': inputSize, 't': runningTime}
+
+def printPrimesToFile(n, filename):
+    primes = sieveOfEratosthenes(n)
+    f = open(filename, 'w')
+
+    for p in primes:
+        f.write("%d\n" % p)
+
+    f.close()
