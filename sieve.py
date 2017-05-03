@@ -6,11 +6,11 @@ def sieveOfEratosthenes(n):
     composites = set()
     primes = list()
 
-    for i in range(2, limit):
+    for i in np.arange(2, limit):
         if i in composites:
             continue
 
-        for j in range(i * i, limit, i):
+        for j in np.arange(i * i, limit, i):
             composites.add(j)
 
         primes.append(i)
